@@ -2,6 +2,7 @@ import modules.utils.corefiles as cf
 import modules.utils.screenController as sc
 import modules.ui as ui
 from tabulate import tabulate
+import modules.controllers.adminperfiController as admin
 DB_FILE = "data/database.json"
 def agregarPerfil():
     sc.borrar_pantalla()
@@ -40,7 +41,7 @@ def eliminarPerfil():
         print("Operación cancelada.")
     sc.pausar_pantalla()
 def adminPerfil():
-    pass
+    admin.menuadmin()
 def editPerfil():
     data = cf.read_json(DB_FILE)
     perfiles = data.get("Perfiles", {})
