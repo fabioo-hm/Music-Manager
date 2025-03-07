@@ -4,9 +4,9 @@ import modules.controllers.adminperfiController as apc
 import modules.utils.corefiles as cf
 import modules.utils.screenController as sc
 import modules.ui as ui
-DB_FILE = "data/dbadmincolecciones.json"
+DB_FILE = "data/database.json"
 
-cf.initialize_json(DB_FILE, {})
+cf.initialize_json(DB_FILE, {"Perfiles": {}})
 def menu():
     sc.borrar_pantalla()
     print(ui.MAIN_MENU)
