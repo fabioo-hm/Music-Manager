@@ -1,6 +1,7 @@
 import modules.utils.corefiles as cf
 import modules.utils.screenController as sc
 import modules.ui as ui
+import modules.controllers.playlistController as plc
 from tabulate import tabulate
 DB_FILE = "data/database.json"
 
@@ -22,7 +23,7 @@ def menuadmin():
                 return menuadmin()
             case 2:
                 sc.borrar_pantalla()
-                ui.MENU_PLAYLIST
+                plc.menuplaylist()
                 sc.pausar_pantalla()
                 return menuadmin()
             case 3:
@@ -36,7 +37,8 @@ def menuadmin():
                 sc.pausar_pantalla()
                 return menuadmin()
             case 5:
-                print("Saliendo del programa...")
+                print("Regresando al menu anterior...")
+                sc.pausar_pantalla()
             case _:
                 sc.borrar_pantalla()
                 print("Opcion invalida")
